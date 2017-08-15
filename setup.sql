@@ -7,8 +7,8 @@ CREATE DATABASE racedb;
 
 CREATE TABLE runner(
   bib_id SERIAL PRIMARY KEY,
-  division VARCHAR(100),
-  sponsor VARCHAR(100),
+  division VARCHAR(100) NOT NULL,
+  sponsor VARCHAR(100) NOT NULL,
   name VARCHAR(100) NOT NULL
 );
 
@@ -38,5 +38,9 @@ CREATE TABLE result(
 
 
 INSERT INTO runner(division, sponsor, name)
-  VALUES('m30', 'NIKE', 'Rudy Gonzalez'),
-        ('m40', 'Reebox', 'Angel Gates');
+  VALUES('m30', 'Nike', 'Rudy Gonzalez'),
+        ('m40', 'Reebox', 'Angel Gates'),
+        ('m40', 'Adidas', 'Billy Madison'),
+        ('m30', 'Nike', 'Steve Jobs'),
+        ('m40', 'Reebox', 'Joey Fisher'),
+        ('m30', 'Nike', 'Katherine Gonzalez');
